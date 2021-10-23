@@ -25,7 +25,7 @@ with open("token.txt") as file_pointer:
         start_time_str = datetime.utcfromtimestamp(start_time).strftime("%Y-%m-%d")
         end_time_str = datetime.utcfromtimestamp(end_time).strftime("%Y-%m-%d")
 
-        query = f"altair language:python created:{start_time_str}..{end_time_str}"
+        query = f"language:python created:{start_time_str}..{end_time_str}"
         print(query)
         end_time -= 86400
         start_time -= 86400
@@ -38,4 +38,3 @@ with open("token.txt") as file_pointer:
             os.system(
                 f"git clone {repository.clone_url} repos/{repository.owner.login}/{repository.name}"
             )
-            break
