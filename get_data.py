@@ -19,7 +19,6 @@ def check_query(library):
 with open("token.txt") as file_pointer:
     ACCESS_TOKEN = file_pointer.read()
     g = Github(ACCESS_TOKEN)
-    # print(g.get_user())
 
     for i in range(5):
         start_time_str = datetime.utcfromtimestamp(start_time).strftime("%Y-%m-%d")
